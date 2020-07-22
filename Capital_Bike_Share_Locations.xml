@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+    <idinfo>
+        <citation>
+            <citeinfo>
+                <title>Capital Bike Share Locations</title>
+                <geoform>vector digital data</geoform>
+            </citeinfo>
+        </citation>
+        <descript>
+            <abstract>Capital Bike Share locations. The dataset contains locations and attributes of Capital Bike Share sites in the Washington, DC metropolitan area, created as part of the DC Geographic Information System (DC GIS) for the D.C. Office of the Chief Technology Officer (OCTO) and participating D.C. government agencies. A database provided by Department of Real Estate Services identified Capital Bike Share locations. Stations within the District of Columbia are owned by DC government.</abstract>
+            <purpose>Capital Bike Share docking stations in the Washington, DC metropolitan region.</purpose>
+        </descript>
+        <status>
+            <progress>Complete</progress>
+            <update>As needed</update>
+        </status>
+        <spdom/>
+        <keywords>
+            <theme>
+                <themekt>None</themekt>
+                <themekey>transportation</themekey>
+                <themekey>bicycle</themekey>
+            </theme>
+            <theme>
+                <themekt>ISO 19115 Topic Categories</themekt>
+                <themekey>transportation</themekey>
+            </theme>
+            <place>
+                <placekt>None</placekt>
+                <placekey>DCGIS</placekey>
+                <placekey>DC GIS</placekey>
+                <placekey>DC</placekey>
+            </place>
+        </keywords>
+        <accconst>None</accconst>
+        <useconst>This work is licensed under a Creative Commons Attribution 4.0 International License.</useconst>
+        <ptcontac>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+                    <cntper>GIS Data Coordinator</cntper>
+                </cntorgp>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>200 I Street SE, 5th Floor</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20003</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntfax>(202) 727-5660</cntfax>
+                <cntemail>dcgis@dc.gov</cntemail>
+                <hours>8:30 am - 5 pm</hours>
+            </cntinfo>
+        </ptcontac>
+        <datacred>District Department of Transportation</datacred>
+    </idinfo>
+    <dataqual>
+        <attracc>
+            <attraccr>In process of validation by source and/or responsible agency. Final dataset will come from DDOT in December once all the stations are open.</attraccr>
+        </attracc>
+        <logic>Validated by source and/or responsible agency</logic>
+        <complete>Validated by source and/or responsible agency</complete>
+        <lineage>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <origin/>
+                        <pubdate>20111105</pubdate>
+                        <title>Capital Bike Share Locations</title>
+                        <onlink>http://capitalbikeshare.com/</onlink>
+                    </citeinfo>
+                </srccite>
+                <typesrc>onLine</typesrc>
+                <srccitea>Capital Bike Share Locations</srccitea>
+                <srccontr>location and attribution</srccontr>
+            </srcinfo>
+            <procstep>
+                <procdesc>OCTO GIS staff generated x,y coordinates from the latitude and longitude columns contained in the DRES database. Staff then projected the layer to MD state plane NAD 1983, units meters to fit with the other District data.</procdesc>
+                <procdate>20111105</procdate>
+                <proccont>
+                    <cntinfo>
+                        <cntorgp>
+                            <cntorg>Office of the Chief Technology Officer</cntorg>
+                            <cntper>GIS Data Coordinator</cntper>
+                        </cntorgp>
+                        <cntaddr>
+                            <addrtype>mailing and physical</addrtype>
+                            <address>441 4th St NW, Suite 930 South</address>
+                            <city>Washington</city>
+                            <state>DC</state>
+                            <postal>20001</postal>
+                            <country>US</country>
+                        </cntaddr>
+                        <cntfax>202-727-5660</cntfax>
+                        <cntemail>dcgis@dc.gov</cntemail>
+                        <hours>9am - 5pm</hours>
+                    </cntinfo>
+                </proccont>
+            </procstep>
+        </lineage>
+    </dataqual>
+    <spdoinfo>
+        <direct>Vector</direct>
+        <ptvctinf>
+            <sdtsterm>
+                <sdtstype>Entity point</sdtstype>
+                <ptvctcnt>469</ptvctcnt>
+            </sdtsterm>
+        </ptvctinf>
+    </spdoinfo>
+    <eainfo>
+        <detailed>
+            <enttyp>
+                <enttypl>DCGIS.CapitalBikeSharePt</enttypl>
+            </enttyp>
+            <attr>
+                <attrlabl>Shape</attrlabl>
+                <attrdef>Feature geometry</attrdef>
+                <attrdefs>ESRI</attrdefs>
+                <attrdomv>
+                              
+                    <udom>Coordinates defining the features.</udom>
+                            
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>ADDRESS</attrlabl>
+                <attrdef>Capital Bike Share Address and Location</attrdef>
+                <attrdefs>Esri</attrdefs>
+                <attrdomv>
+                              
+                    <udom>Coordinates defining the features.</udom>
+                            
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>SHAPE</attrlabl>
+                <attrdef>Feature geometry.</attrdef>
+                <attrdefs>ESRI</attrdefs>
+                <attrdomv>
+                              
+                    <udom>Coordinates defining the features.</udom>
+                            
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>LATITUDE</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>LONGITUDE</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>INSTALLED</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>LOCKED</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>INSTALL_DATE</attrlabl>
+                <attrdef>Internal feature number.</attrdef>
+                <attrdefs>Esri</attrdefs>
+                <attrdomv>
+                              
+                    <udom>Sequential unique whole numbers that are automatically generated.</udom>
+                            
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>OBJECTID</attrlabl>
+                <attrdef>Internal feature number.</attrdef>
+                <attrdefs>ESRI</attrdefs>
+                <attrdomv>
+                              
+                    <udom>Sequential unique whole numbers that are automatically generated.</udom>
+                            
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>ID</attrlabl>
+                <attrdef>Capital Bike Share ID</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>TERMINAL_NUMBER</attrlabl>
+                <attrdef>Capital Bike Share Terminal Number</attrdef>
+            </attr>
+            <attr>
+                <attrlabl>REMOVAL_DATE</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>TEMPORARY_INSTALL</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>Creator</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>Created</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>Editor</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>YCOORD</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>NUMBER_OF_BIKES</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>SE_ANNO_CAD_DATA</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>GIS_ID</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>Edited</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>NUMBER_OF_EMPTY_DOCKS</attrlabl>
+            </attr>
+            <attr>
+                <attrlabl>GlobalID</attrlabl>
+            </attr>
+        </detailed>
+    </eainfo>
+    <distinfo>
+        <distrib>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+                    <cntper>GIS Data Coordinator</cntper>
+                </cntorgp>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>200 I Street SE, 5th Floor</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20003</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntfax>(202) 727-5660</cntfax>
+                <cntemail>dcgis@dc.gov</cntemail>
+                <hours>8:30 am - 5 pm</hours>
+            </cntinfo>
+        </distrib>
+        <distliab>See access and use constraints information.</distliab>
+        <custom>DC datasets can be downloaded from "http://opendata.dc.gov".</custom>
+    </distinfo>
+    <metainfo>
+        <metd>20171026</metd>
+        <metc>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+                    <cntper>GIS Data Coordinator</cntper>
+                </cntorgp>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>200 I Street SE, 5th Floor</address>
+                    <city>Washington</city>
+                    <state>DC</state>
+                    <postal>20003</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntfax>(202) 727-5660</cntfax>
+                <cntemail>dcgis@dc.gov</cntemail>
+                <hours>8:30 am - 5 pm</hours>
+            </cntinfo>
+        </metc>
+        <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+        <metstdv>FGDC-STD-001-1998</metstdv>
+        <mettc>local time</mettc>
+    </metainfo>
+</metadata>
