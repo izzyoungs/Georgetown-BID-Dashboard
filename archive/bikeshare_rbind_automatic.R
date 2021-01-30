@@ -1,9 +1,10 @@
 library(tidyverse)
 library(magrittr)
 library(lubridate)
+library(readr)
 
 # set wd
-setwd("C:/Users/izzyo/OneDrive/Documents/GitHub/Georgetown-BID-Dashboard")
+setwd("C:/Users/Izzy/GoogleDriveGU/GitHub/Georgetown-BID-Dashboard")
 
 # pull bikeshare data from CaBi index page
 headurl <- "https://s3.amazonaws.com/capitalbikeshare-data/"
