@@ -1,0 +1,64 @@
+library(tidyverse)
+library(magrittr)
+library(lubridate)
+
+# set wd
+setwd("C:/Users/izzyo/OneDrive/Documents/GitHub/Georgetown-BID-Dashboard")
+
+# pull bikeshare data from CaBi index page
+headurl <- "https://s3.amazonaws.com/capitalbikeshare-data/"
+tailurl <- "-capitalbikeshare-tripdata"
+date <- Sys.Date() %m-% months(1)
+date <- as.Date(date, format = "%m-%d-%Y") 
+year <- format.Date(date, "%Y")
+month <- format.Date(date, "%m")
+date <- paste(year, month, sep = "")
+url <- paste(headurl, date, tailurl, ".zip", sep = "")
+destfile <- paste(getwd(), "/", date, tailurl, ".zip", sep = "") 
+rmvfile <- paste(getwd(), "/", date, tailurl, ".csv", sep = "") 
+
+# download CaBi data from this month
+mapply(download.file, url, destfile=destfile)
+lapply(destfile, unzip, exdir = getwd())
+file.remove(destfile)
+
+# read in the old and new CaBi data to merge
+historicalcabi <- read_csv("bikesharedata.csv")
+newcabi <- read_csv(paste(getwd(), "/", date, tailurl, ".csv", sep = ""))
+
+# transform dates for merging
+newcabi$updated <- as.Date(newcabi$started_at)
+newcabi$updated <- format(newcabi$updated, format="%m/%d/%Y")
+newcabi$updated <- as.character(newcabi$updated)
+
+# select and filter the correct start and end stations
+newcabi <- newcabi %>% 
+  select(start_station_name, end_station_name, updated, member_casual) %>%
+  filter(start_station_name == "M St & Pennsylvania Ave NW" | 
+           start_station_name == "C & O Canal & Wisconsin Ave NW" | 
+           start_station_name == "Wisconsin Ave & O St NW" | 
+           start_station_name == "Georgetown Harbor / 30th St NW" | 
+           start_station_name == "37th & O St NW / Georgetown University" |
+           start_station_name == "34th & Water St NW" |
+           start_station_name == "Potomac & M St NW" |
+           end_station_name == "M St & Pennsylvania Ave NW" | 
+           end_station_name == "C & O Canal & Wisconsin Ave NW" | 
+           end_station_name == "Wisconsin Ave & O St NW" | 
+           end_station_name == "Georgetown Harbor / 30th St NW" | 
+           end_station_name == "37th & O St NW / Georgetown University" |
+           end_station_name == "34th & Water St NW" |
+           end_station_name == "Potomac & M St NW")
+
+# bind historic and new CaBi data
+updatedcabi <- rbind(historicalcabi, newcabi)
+
+# save a copy in the archive
+write_csv(updatedcabi, paste("archive/bikesharedata", date, ".csv", sep = ""))
+
+# update the historic data
+write_csv(updatedcabi, "bikesharedata.csv")
+
+# remove csvs
+file.remove(rmvfile)
+
+          

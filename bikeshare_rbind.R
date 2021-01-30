@@ -1,12 +1,12 @@
-# library(tidyverse)
-# library(dplyr)
-# library(magrittr)
+library(tidyverse)
+library(dplyr)
+library(magrittr)
 
 # set wd
-setwd("Bikeshare Tableau Dashboard Folder")
+setwd("~/GitHub/Georgetown-BID-Dashboard")
 
 historicalcabi <- read_csv("bikesharedata.csv")
-newcabi <- read_csv("202006-capitalbikeshare-tripdata.csv")
+newcabi <- read_csv("202010-capitalbikeshare-tripdata.csv")
 
 newcabi$updated <- as.Date(newcabi$started_at)
 newcabi$updated <- format(newcabi$updated, format="%m/%d/%Y")
@@ -31,4 +31,4 @@ newcabi <- newcabi %>%
 
 updatedcabi <- rbind(historicalcabi, newcabi)
 
-write_csv(updatedcabi, "bikseharedata_sample.csv")
+write_csv(updatedcabi, "bikesharedata.csv")
